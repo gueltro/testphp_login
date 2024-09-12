@@ -3,6 +3,9 @@ project(testphp_login)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# Remove dependency from SSL as it is not needed for target website.
+set(CPR_ENABLE_SSL OFF)
+
 # Set a default build type if none was specified
 # Based on: https://github.com/openchemistry/tomviz/blob/master/cmake/BuildType.cmake
 set(DEFAULT_BUILD_TYPE "Release")

@@ -53,6 +53,7 @@ or
 ## Requirements
 - C++17 compatible compiler such as Clang or GCC (see requirements from https://github.com/libcpr/cpr for details on the compatibility of the compilers).
 - cmake >= 3.20
+- Linux or Windows (tested on Debian 12 and Windows 11).
 
 ## Credits
 This app uses cpr and was built using https://github.com/libcpr/example-cmake-fetch-content.git as a starting point.
