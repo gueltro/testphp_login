@@ -16,7 +16,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
-add_library(testphp_login_lib src/login.cc src/login.h)
+add_library(testphp_login_lib src/login.cpp src/login.h)
 add_executable(testphp_login_app src/main.cpp)
 
 if(WIN32) # Install dlls in the same directory as the executable on Windows
@@ -26,7 +26,7 @@ endif()
 
 include(FetchContent)
 FetchContent_Declare(cpr GIT_REPOSITORY https://github.com/libcpr/cpr.git
-                         GIT_TAG 1.10.5) # The commit hash for 1.10.x. Replace with the latest from: https://github.com/libcpr/cpr/releases
+	GIT_TAG 1.10.5) # The commit hash for latest CPR release avilable. 
 FetchContent_MakeAvailable(cpr)
 
 target_link_libraries(testphp_login_lib PRIVATE cpr::cpr)

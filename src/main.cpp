@@ -21,13 +21,13 @@ void PrintPageOrError(testphp_login::PageOrError page_or_error) {
 
 /// @brief Print the instructions in case the arguments provided were invalid.
 void PrintInstruction() {
-    std::cout << "testphp_login only accepts one or two arguments." << std::endl;
+    std::cout << "testphp_login_app only accepts one or two arguments." << std::endl;
     std::cout << "You must specify a USERNAME and optionally a PASSWORD with the following syntax:" << std::endl;
-    std::cout <<  "testphp_login USERNAME PASSWORD" << std::endl;
-    std::cout <<  "testphp_login USERNAME" << std::endl;
+    std::cout <<  "testphp_login_app USERNAME PASSWORD" << std::endl;
+    std::cout <<  "testphp_login_app USERNAME" << std::endl;
 }
 
-// main only deals with processing user input and printing output.
+// main.cpp only deals with processing user input and printing output.
 // All of the logic for logging in is hidden in testphp_login_lib and exposed through login.h.
 int main(int argc, char** argv) {
     // Username and password were provided.
